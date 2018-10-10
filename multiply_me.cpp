@@ -19,25 +19,24 @@ void multiply_me() {
 		}
 	}
 
-	//outer loop
+	//outer loop, prints to console top header
 	for (int i = 0; i < ROWS; i++) {
-		if (i == 0) {
-
-			//prints the header for the rows
-			//for (int k = 0; k < ROWS; k++) {
-			//	cout << "   " << k + 1;
-			//}
-
-			//prints header for the columns
-			//for (int l = 0; l < ROWS; l++) {
-			//	cout << "\n\n" << l + 1;
-			//}
-		}
-
+		
 		cout << "\t";
 
-		//inner loop
+		if (i == 0) {
+
+			for (int k = 0; k < COLUMNS; k++) { //top header
+				cout << "   " << setw(2) << (k + 1) << ":";
+			}
+
+		}
+
+		//inner loop, prints to console side header
 		for (int j = 0; j < COLUMNS; j++) {
+			if (j == 0) {
+				cout << "\n\n";
+			}
 			cout << "   " << setw(3) << table[i][j];
 			if (j == (COLUMNS - 1)) {
 				cout << "\n\n";
