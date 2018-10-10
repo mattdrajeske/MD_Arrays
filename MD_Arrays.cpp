@@ -12,7 +12,7 @@ int main()
 	char any;
 
 	cout << "Welcome to my multiplication table program!";
-	cout << "\nHere is a multiplication table: " << endl;
+	cout << "\nHere is a multiplication table: " << endl << endl;
 	multiply_me();
 	cin >> any;
 
